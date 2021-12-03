@@ -50,22 +50,32 @@ $nav = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    main{
+        width: 800px;
+        margin: auto;
+    }
+</style>
 <body>
     <header>
-        <div class="logo"></div>
-        <div>Privacy & Termini</div>
+        <img style="width: 60px" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="">
+        <span>Privacy & Termini</span>
         <nav>
             <?php foreach($nav as $value) {
         ?> 
-        <a> <?php echo $value ?> </a>
+        <a href="">  <?php echo $value; echo " " ?>  </a>
     <?php } ?>
+    <hr>
         </nav>
     </header>
-    <?php foreach($faq as $key => $value) {
-        ?> 
-        <h2> <?php echo $value['question'] ?> </h2>
-        <p> <?php echo $value['answer'] ?> </p>
-
-    <?php } ?>
+    <main>
+        <?php foreach($faq as $key => $value) {
+            ?> 
+            <h2> <?php echo $value['question'] ?> </h2>
+            <p> <?php echo $value['answer'] ?> </p>
+    
+        <?php } ?>
+        
+    </main>
 </body>
 </html>
